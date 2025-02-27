@@ -22,7 +22,7 @@ int main(){
      scanf(" %c", &est1); // Entrada de Dados Estado
      printf("Repita a letra com um número de 1 a 4: \n");
      scanf("%s", codcarta1); // Entrada de dados Código da Carta
-     printf("Digite um nome de uma Cidade: \n");
+     printf("Digite o nome de uma Cidade para este Estado: \n");
      scanf("%s", cidade1); // Entrada de Dados Cidade
      printf("Digite a População da Cidade: \n");
      scanf("%d", &habitantes1); // Entrada de Dados População
@@ -42,7 +42,7 @@ int main(){
      scanf(" %c", &est2); // Entrada de Dados Estado
      printf("Repita a letra com um número de 1 a 4: \n");
      scanf("%s", codcarta2); // Entrada de dados Código da Carta
-     printf("Digite um nome de uma Cidade: \n");
+     printf("Digite o nome de uma Cidade para este Estado: \n");
      scanf("%s", cidade2); // Entrada de Dados Cidade
      printf("Digite a População da Cidade: \n");
      scanf("%d", &habitantes2); // Entrada de Dados População
