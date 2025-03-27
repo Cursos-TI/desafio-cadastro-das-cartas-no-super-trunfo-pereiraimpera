@@ -3,7 +3,8 @@
 int main(){
 
      //Declaração de Variáveis: Cartas 1 e 2
-     int habitantes1, habitantes2, turisticos1, turisticos2;
+     int turisticos1, turisticos2;
+     unsigned long int habitantes1, habitantes2; // unsigned long int para armazenar valores maiores ( somente numeros positivos )
      float area1 = 0.0, area2 = 0.0;
      float pib1 = 0.000, pib2 = 0.000;
      float pibpercapita1 = 0.0, pibpercapita2 = 0.0;
@@ -27,7 +28,7 @@ int main(){
      printf("Digite o nome de uma Cidade para este Estado: \n");
      scanf("%s", cidade1); 
      printf("Digite a População da Cidade: \n");
-     scanf("%d", &habitantes1); 
+     scanf("%lu", &habitantes1); 
      printf("Digite a área em km²: \n");
      scanf("%f", &area1); 
      printf("Digite o PIB da Cidade (Em Bilhões): \n");
@@ -49,7 +50,7 @@ int main(){
      printf("Digite o nome de uma Cidade para este Estado: \n");
      scanf("%s", cidade2); 
      printf("Digite a População da Cidade: \n");
-     scanf("%d", &habitantes2); 
+     scanf("%lu", &habitantes2); 
      printf("Digite a área em km²: \n");
      scanf("%f", &area2); 
      printf("Digite o PIB da Cidade (Em Bilhões): \n");
@@ -64,18 +65,22 @@ int main(){
      //Calculo para Densidade Populacional e PIB per Capita (Carta 1)
      densidadepopulacao1 = habitantes1 / area1;
      pibpercapita1 = (pib1 * 1000000000) / habitantes1; //PIB sendo * 1000000000 para converter para reais
+     
+     //Calculo para SuperPoder (Carta 1)
+     float superpoder1 = (float)(habitantes1 + area1 + ( pib1 * 1000000000 ) + turisticos1 + pibpercapita1 + ( 1 / densidadepopulacao1 ));
 
      //Exibindo Carta 1
      printf("Carta Nº 1\n");
      printf("Estado: %c\n", est1);
      printf("Código da Carta: %s\n", codcarta1);
      printf("Nome da Cidade: %s\n", cidade1);
-     printf("População: %d\n", habitantes1);
+     printf("População: %lu\n", habitantes1);
      printf("Área: %.2f km²\n", area1);
      printf("PIB: %.2f Bilhões de Reais\n", pib1);
      printf("Pontos Turísticos: %d\n", turisticos1);
      printf("Densidade Populacional: %.2f Hab/km²\n", densidadepopulacao1);
      printf("PIB per Capita: %.2f Reais\n", pibpercapita1);
+     printf("Super Poder: %f\n", superpoder1);
 
      printf("---------------------------------\n"); // Espaçamento entre as Cartas
 
@@ -83,17 +88,27 @@ int main(){
      densidadepopulacao2= habitantes2/area2;
      pibpercapita2 = (pib2 * 1000000000) / habitantes2; //PIB sendo * 1000000000 para converter para reais
 
+     //Calculo para SuperPoder (Carta 2)
+     float superpoder2 = (float)(habitantes2 + area2 + ( pib2 * 1000000000 ) + turisticos2 + pibpercapita2 + ( 1 / densidadepopulacao2 ));
+
      //Exibindo Carta 2
      printf("Carta Nº 2\n"); 
      printf("Estado: %c\n", est2);
      printf("Código da Carta: %s\n", codcarta2);
      printf("Nome da Cidade: %s\n", cidade2);
-     printf("População: %d\n", habitantes2);
+     printf("População: %lu\n", habitantes2);
      printf("Área: %.2f km²\n", area2);
      printf("PIB: %.2f Bilhões de Reais\n", pib2);
      printf("Pontos Turísticos: %d\n", turisticos2);
      printf("Densidade Populacional: %.2f Hab/km²\n", densidadepopulacao2);
      printf("PIB per Capita: %.2f Reais\n", pibpercapita2);
+     printf("Super Poder: %f\n", superpoder2);
+
+     printf("---------------------------------\n");
+
+     //Comparação das Cartas
+     habitantes1 > habitantes2 ? printf("Carta 1 Vence\n") : printf("Carta 2 Vence\n");
+
 
      
      return 0;
