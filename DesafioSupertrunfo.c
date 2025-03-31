@@ -89,6 +89,7 @@ int main(){
      pibpercapita2 = (pib2 * 1000000000) / habitantes2; //PIB sendo * 1000000000 para converter para reais
 
      //Calculo para SuperPoder (Carta 2)
+     //Soma dos atributos habitantes, area, pib, turisticos, pibpercapita e (inversão da densidade populacional 1/densidadepopulacao)
      float superpoder2 = (float)(habitantes2 + area2 + ( pib2 * 1000000000 ) + turisticos2 + pibpercapita2 + ( 1 / densidadepopulacao2 ));
 
      //Exibindo Carta 2
@@ -107,9 +108,15 @@ int main(){
      printf("---------------------------------\n");
 
      //Comparação das Cartas
-     habitantes1 > habitantes2 ? printf("Carta 1 Vence\n") : printf("Carta 2 Vence\n");
+     printf("Comparação de Cartas:\n");
+     printf("População: %d\n", habitantes1 > habitantes2);
+     printf("Área: %d\n", area1 > area2);
+     printf("PIB: %d\n", pib1 > pib2);
+     printf("Pontos Turísticos: %d\n", turisticos1 > turisticos2);
+     printf("Densidade Populacional: %d\n", densidadepopulacao1 < densidadepopulacao2); //A densidade populacional com o menor valor, vence
+     printf("PIB per Capita: %d\n", pibpercapita1 > pibpercapita2);
+     printf("Super Poder: %d\n", superpoder1 > superpoder2);
+ 
 
-
-     
-     return 0;
+  return 0;
 }
