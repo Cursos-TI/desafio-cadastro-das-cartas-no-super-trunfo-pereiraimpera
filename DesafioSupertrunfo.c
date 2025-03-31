@@ -67,6 +67,7 @@ int main(){
      pibpercapita1 = (pib1 * 1000000000) / habitantes1; //PIB sendo * 1000000000 para converter para reais
      
      //Calculo para SuperPoder (Carta 1)
+     //Soma dos atributos habitantes, area, pib, turisticos, pibpercapita e (inversão da densidade populacional 1/densidadepopulacao)
      float superpoder1 = (float)(habitantes1 + area1 + ( pib1 * 1000000000 ) + turisticos1 + pibpercapita1 + ( 1 / densidadepopulacao1 ));
 
      //Exibindo Carta 1
