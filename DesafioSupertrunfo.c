@@ -9,7 +9,7 @@ int main(){
      float pib1 = 0.000, pib2 = 0.000;
      float pibpercapita1 = 0.0, pibpercapita2 = 0.0;
      float densidadepopulacao1 = 0.0, densidadepopulacao2 = 0.0;
-     float superpoder1 = 0.0, superpoder2 = 0.0;
+     double superpoder1 = 0.000, superpoder2 = 0.0;
      char est1, est2;
      char codcarta1[4], codcarta2[4];
      char cidade1[20], cidade2[20];
@@ -80,6 +80,7 @@ int main(){
      printf("Pontos Turísticos: %d\n", turisticos1);
      printf("Densidade Populacional: %.2f Hab/km²\n", densidadepopulacao1);
      printf("PIB per Capita: %.2f Reais\n", pibpercapita1);
+     printf("Super-Poder: %.2f\n", superpoder1);
      
 
      printf("---------------------------------\n"); // Espaçamento entre as Cartas
@@ -103,6 +104,7 @@ int main(){
      printf("Pontos Turísticos: %d\n", turisticos2);
      printf("Densidade Populacional: %.2f Hab/km²\n", densidadepopulacao2);
      printf("PIB per Capita: %.2f Reais\n", pibpercapita2);
+     printf("Super-Poder: %.2f\n", superpoder2);
      
 
      printf("---------------------------------\n");
